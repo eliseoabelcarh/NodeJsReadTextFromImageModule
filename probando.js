@@ -6,8 +6,6 @@ const crearTextFromImageReader = async () => {
 
     const worker = createWorker({
         logger: m => console.log(m),
-        /*       cacheMethod: 'readOnly',
-              gzip: false, */
 
     });
 
