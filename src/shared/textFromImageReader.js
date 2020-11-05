@@ -5,8 +5,11 @@ const { getNombresYApellidosDeData } = require('../shared/functions')
 
 const createTextFromImageReader = async () => {
     const worker = createWorker({
-        logger: m => console.log(m.progress),
-
+        logger: m => {
+            let num = m.progress
+            num = Number.parseFloat(num * 100).toFixed(2)
+            console.log(num + '%')
+        },
     });
 
     return {
