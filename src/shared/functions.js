@@ -26,29 +26,13 @@ async function getNombresYApellidosDeData(text) {
     const data = stringCut(text)
     let apellidos = data[4]
     let nombres = data[6]
-
     let array1 = fix1(apellidos)
     let array2 = fix1(nombres)
-
-    console.log('111111-------')
-    console.log(array1)
-    console.log(array2)
-    console.log('111111---------')
-
     apellidos = fix2(array1)
     nombres = fix2(array2)
-
-
-    console.log('222-------')
-    console.log(apellidos)
-    console.log(nombres)
-    console.log('2222---------')
-
     //TODO remplazar Ñ por N
     apellidos = apellidos.toUpperCase().trim()
     nombres = nombres.toUpperCase().trim()
-
-    console.log('sososos', { apellidos, nombres })
     return { apellidos, nombres }
 }
 
